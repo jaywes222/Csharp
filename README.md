@@ -1,41 +1,41 @@
 ﻿# Prime Number Checker
 
-A simple C# program to determine whether a given number is a prime number.
+A **sleek and vibrant** C# program designed to determine if a given number is prime, bringing functionality and elegance together in true **SkeptiKrafts** style.
 
 ---
 
 ## Features
 
-- **Validates User Input**: Handles invalid input gracefully using `int.TryParse()`.
-- **Reusable Functionality**: Implements a reusable `IsPrime()` method to encapsulate prime-checking logic.
-- **Optimized Performance**: Uses an optimized loop to check divisors only up to the square root of the number.
-- **Enhanced User Experience**: Displays clear, dynamic output with the user's entered number.
-- **Edge Case Handling**: Explicitly excludes numbers less than or equal to 1 from being considered prime.
+- **Graceful Validation**: No more clunky errors! Handles invalid input with finesse using `int.TryParse()`.
+- **Reusable Intelligence**: Encapsulated prime-checking logic in a smart, reusable `IsPrime()` method.
+- **Streamlined Performance**: Optimized logic to check divisors only up to the square root of the number. Efficient, because time is precious.
+- **User-Centric Experience**: Clear, dynamic output that resonates with the user, making every interaction purposeful.
+- **Thoughtful Edge Case Handling**: Numbers less than or equal to 1? We’ve got them covered. Simplified logic meets thoughtful design.
 
 ---
 
 ## What’s New?
 - **Validation**:  
-  Used `int.TryParse()` to handle invalid user input gracefully and prevent runtime errors.  
+  Enhanced with `int.TryParse()` to handle user input like a pro and prevent runtime hiccups.  
 
-- **Functionality**:  
-  Introduced a reusable `IsPrime()` method to encapsulate the logic for checking whether a number is prime.  
+- **Reusable Logic**:  
+  The `IsPrime()` method is your reliable go-to for prime-checking brilliance.  
 
-- **Optimization**:  
-  Improved performance by reducing the loop range from `1 to number` to `2 to √number`.  
+- **Optimized Elegance**:  
+  Re-engineered the loop to run from `2 to √number`, minimizing unnecessary calculations. Smart and fast.  
 
-- **User Experience**:  
-  Added dynamic output that displays the user's entered number in the result message for clarity.  
+- **Dynamic Interaction**:  
+  Clear and lively output, personalized with the user's entered number. Simple yet engaging.  
 
-- **Edge Cases**:  
-  The `IsPrime()` method now explicitly handles numbers ≤ 1, which are not prime by definition.  
+- **Comprehensive Edge Handling**:  
+  Numbers ≤ 1 are no longer a mystery. They’re explicitly handled with clarity and precision.  
 
 ---
 
 ## Usage
-1. Clone the repository or copy the code into a C# console application.
-2. Run the program in Visual Studio or your preferred IDE.
-3. Enter a number when prompted to check if it is a prime number.
+1. Clone this thoughtfully designed repository or copy the elegant code into your C# console application.
+2. Fire it up in Visual Studio or your IDE of choice.
+3. Enter a number and enjoy the polished experience as you discover its primality.
 
 ---
 
@@ -66,8 +66,8 @@ Enter a number to test if it is a prime number:
 ---
 
 ## Installation
-1. Install [.NET SDK](https://dotnet.microsoft.com/download) if not already installed.
-2. Compile and run the `Program.cs` file using:
+1. Install the intuitive [.NET SDK](https://dotnet.microsoft.com/download) if not already installed.
+2. Run the elegant `Program.cs` file using:
    ```bash
    dotnet run
    ```
@@ -75,9 +75,9 @@ Enter a number to test if it is a prime number:
 ---
 
 ## Contributing
-Feel free to fork the project, make improvements, and submit a pull request. Contributions are always welcome!
+Got an idea or a spark of inspiration? Fork it, refine it, and submit a pull request. Let’s build brilliance together—the **SkeptiKrafts** way.
 
 ---
 
 ## License
-This project is licensed under the [APACHE License](LICENSE).
+This project is licensed under the [MIT License](LICENSE). Bringing innovation and simplicity together.
