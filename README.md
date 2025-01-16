@@ -80,4 +80,4 @@ Got an idea or a spark of inspiration? Fork it, refine it, and submit a pull req
 ---
 
 ## License
-This project is licensed under the [APACHE License](LICENSE). Bringing innovation and simplicity together.
+This project is licensed under the [APACHE License](LICENSE.txt). Bringing innovation and simplicity together.
