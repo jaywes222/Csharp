@@ -55,6 +55,22 @@ namespace WeatherStationSimulator
         static double CalculateAvgTemp(int[] temperatures)
         {
             return temperatures.Average();
+
+            //double sum = 0;
+
+            //for (int i = 0; i < temp.Length; i++)
+            //{
+            //    sum += temp[i];
+            //}
+
+            //foreach(int i in temp)
+            //{
+            //    sum += i;
+            //}
+
+            //double tempAvg = sum / temp.Length;
+
+            //return tempAvg;
         }
 
         // Find the most common weather condition
@@ -64,6 +80,28 @@ namespace WeatherStationSimulator
                 .GroupBy(condition => condition)
                 .OrderByDescending(group => group.Count())
                 .First().Key;
+
+            //int maxCount = 0;
+            //string mostCommon = conditions[0];
+
+            //for (int i = 0; i < conditions.Length; i++)
+            //{
+            //    int tempCount = 0;
+
+            //    for (int j = 0; j < conditions.Length; j++)
+            //    {
+            //        if (conditions[j] == conditions[i])
+            //        {
+            //            tempCount++;
+            //        }
+            //        if (tempCount > maxCount)
+            //        {
+            //            maxCount = tempCount;
+            //            mostCommon = conditions[i];
+            //        }
+            //    }
+            //}
+            //return mostCommon;
         }
     }
 }
