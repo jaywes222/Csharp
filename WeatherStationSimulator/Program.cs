@@ -5,7 +5,12 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Enter The No Of Days To Simulate");
-            int days = int.Parse(Console.ReadLine());
+            //Get User Input & Validate
+            if (!int.TryParse(Console.ReadLine(), out int days) || days <= 0)
+            {
+                Console.WriteLine("Invalid input! Please enter a positive integer.");
+                return;
+            }
 
             int[] temp = new int[days];
             string[] conditions = { "Sunny", "Rainy", "Cloudy", "Snowy" };
@@ -20,7 +25,7 @@
                 weatherConditions[i] = conditions[random.Next(conditions.Length)];
             }
 
-            //Daily Weather Condition
+            //Daily Weather Report
             Console.WriteLine("\nWeather Report:");
             for(int i = 0; i < days; i++)
             {
@@ -28,13 +33,39 @@
             }
 
             //Summary Statistics
-            Console.WriteLine($"\n\nAverage Temp is: {CalculateAvgTemp(temp)}");
-            Console.WriteLine($"The MAX Temp is: {temp.Max()}");
-            Console.WriteLine($"The MIN Temp is: {temp.Min()}");
+            Console.WriteLine($"\n\nAverage Temp is: {CalculateAvgTemp(temp)}°C");
+            Console.WriteLine($"The MAX Temp is: {temp.Max()}°C");
+            Console.WriteLine($"The MIN Temp is: {temp.Min()}°C");
+            Console.WriteLine($"The MOST COMMON Condition is: {MostCommonConditions(weatherConditions)}");
             //Console.WriteLine($"The MIN Temp is: {MinTemp(temp)}");
 
             Console.ReadKey();
 
+        }
+
+        static string MostCommonConditions(string[] conditions)
+        {
+            int maxCount = 0;
+            string mostCommon = conditions[0];
+
+            for(int i =0; i < conditions.Length; i++)
+            {
+                int tempCount = 0;
+
+                for(int j = 0; j < conditions.Length; j++)
+                {
+                    if (conditions[j] == conditions[i])
+                    {
+                        tempCount++;
+                    }
+                    if(tempCount > maxCount)
+                    {
+                        maxCount = tempCount;
+                        mostCommon = conditions[i];
+                    }
+                }
+            }
+            return mostCommon;
         }
 
         static double CalculateAvgTemp(int[] temp)
