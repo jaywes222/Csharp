@@ -19,6 +19,30 @@
                 weatherConditions[i] = conditions[random.Next(conditions.Length)];
             }
 
+            Console.WriteLine($"Average Temp is: {CalculateAvgTemp(temp)}");
+
+            Console.ReadKey();
+
+        }
+
+        static double CalculateAvgTemp(int[] temp)
+        {
+            double sum = 0;
+
+            for(int i = 0; i < temp.Length; i++)
+            {
+                sum += temp[i];
+            }
+
+            //foreach(int i in temp)
+            //{
+            //    sum += i;
+            //}
+
+            double tempAvg = sum / temp.Length;
+
+            return tempAvg;
+
         }
     }
 }
