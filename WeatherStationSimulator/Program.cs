@@ -13,13 +13,25 @@
 
             Random random = new Random();
 
+            //Random Weather Data Generation
             for (int i = 0; i < days; i++)
             {
                 temp[i] = random.Next(-10, 40);
                 weatherConditions[i] = conditions[random.Next(conditions.Length)];
             }
 
-            Console.WriteLine($"Average Temp is: {CalculateAvgTemp(temp)}");
+            //Daily Weather Condition
+            Console.WriteLine("\nWeather Report:");
+            for(int i = 0; i < days; i++)
+            {
+                Console.WriteLine($"Day {i + 1}: {weatherConditions[i]} with {temp[i]}°C");
+            }
+
+            //Summary Statistics
+            Console.WriteLine($"\n\nAverage Temp is: {CalculateAvgTemp(temp)}");
+            Console.WriteLine($"The MAX Temp is: {temp.Max()}");
+            Console.WriteLine($"The MIN Temp is: {temp.Min()}");
+            //Console.WriteLine($"The MIN Temp is: {MinTemp(temp)}");
 
             Console.ReadKey();
 
@@ -44,5 +56,20 @@
             return tempAvg;
 
         }
+
+        //static int MinTemp(int[] temp)
+        //{
+        //    int min = temp[0];
+
+        //    foreach(int i in temp)
+        //    {
+        //        if (i < min)
+        //        {
+        //            min = temp;
+        //        }
+        //    }
+
+        //    return min;
+        //}
     }
 }
